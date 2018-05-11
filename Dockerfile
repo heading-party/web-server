@@ -1,10 +1,14 @@
 #
-# Heading Party
-#  Dockerfile for Django web server.
+#  Heading Party
+#    Dockerfile for Django web server.
 #
 
 # Base image.
 FROM python:3.4
+
+# Environment variable.
+ENV REMOTE ${remote:-origin}
+ENV BRANCH ${branch:-master}
 
 # Load code and Install package.
 RUN cd /root && \
@@ -16,10 +20,11 @@ RUN cd /root && \
 WORKDIR /root/web-server
 
 # Update code and Run server.
-CMD	git pull origin master && \
+CMD	git checkout ${BRANCH} && \
+	git pull ${REMOTE} ${BRANCH} && \
 	pip install -r requirements.txt && \
 	python src/manage.py migrate && \
 	python src/manage.py runserver 0.0.0.0:3000
 
-# Expose port
+# Expose port.
 EXPOSE 3000
