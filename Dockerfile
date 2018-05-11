@@ -4,7 +4,7 @@
 #
 
 # Base image.
-FROM python:3.4
+FROM python:3.6
 
 # Environment variable.
 ENV REMOTE ${remote:-origin}
