@@ -20,8 +20,9 @@ RUN cd /root && \
 WORKDIR /root/web-server
 
 # Update code and Run server.
-CMD	git checkout ${BRANCH} && \
-	git pull ${REMOTE} ${BRANCH} && \
+CMD	git fetch ${REMOTE} ${BRANCH} && \
+	git checkout ${BRANCH} && \
+	git pull && \
 	pip install -r requirements.txt && \
 	python src/manage.py migrate && \
 	python src/manage.py runserver 0.0.0.0:3000
