@@ -2,4 +2,4 @@
 
 [![Build Status](https://travis-ci.com/heading-party/web-server.svg?branch=master)](https://travis-ci.com/heading-party/web-server)
 
-도커 이미지 headingparty/webserver 이용
+도커 이미지 headingparty/web-server 이용
