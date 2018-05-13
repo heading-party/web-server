@@ -1,5 +1,5 @@
-# 헤딩파티 웹서버 with Django
+# 헤딩파티 웹서버
 
-[![Build Status](https://travis-ci.com/heading-party/web-server.svg?branch=master)](https://travis-ci.com/heading-party/web-server)
+[![Build Status](https://travis-ci.com/headingparty/web-server.svg?branch=master)](https://travis-ci.com/headingparty/web-server)
 
-도커 이미지 headingparty/web-server 이용
+Docker Hub: [headingparty/web-server](https://hub.docker.com/r/headingparty/web-server)
