@@ -1,3 +1,6 @@
 from django.test import TestCase
 
-# Create your tests here.
+class MyTests(TestCase):
+
+    def test_one_plus_one(self):
+        self.assertIs(1+1 == 2, False)
