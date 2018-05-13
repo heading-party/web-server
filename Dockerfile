@@ -12,7 +12,7 @@ ENV BRANCH ${branch:-master}
 
 # Load code and Install package.
 RUN cd /root && \
-	git clone https://www.github.com/heading-party/web-server.git && \
+	git clone https://www.github.com/headingparty/web-server.git && \
 	cd /root/web-server && \
 	pip install -r requirements.txt
 
